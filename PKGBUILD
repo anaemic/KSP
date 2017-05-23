@@ -1,4 +1,5 @@
-# Maintainer: J0k3r <moebius282 e4at gmail D0_T com>
+# Created by: J0k3r <moebius282 e4at gmail D0_T com> / felixonmars < https://github.com/felixonmars >
+# Current update by : anaemic https://github.com/anaemic/
 
 pkgname=kerbalspaceprogram
 pkgver=1.2.2
