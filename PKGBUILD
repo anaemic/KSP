@@ -56,5 +56,5 @@ package()
 
 
 	install -D -m644 "$srcdir/$pkgname.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
-	# install -D -m644 "$pkgdir/opt/$pkgname/$pkgname.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
+	install -D -m644 "$pkgdir/opt/$pkgname/Launcher_Data/Resources/UnityPlayer.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
 }
