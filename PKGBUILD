@@ -32,8 +32,8 @@ package()
 	chmod -R 0777 "saves/"
 	
 	touch "settings.cfg" "KSP.log"
-	chmod o+w "*.cfg" "KSP.log"
-
+	chmod o+w "settings.cfg" "KSP.log" "Physics.cfg" "PartDatabase.cfg"
+	
 	chmod -R 0777 "GameData/"
 	chmod -R 0777 "KSP_Data/"
 	
