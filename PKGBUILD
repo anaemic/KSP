@@ -15,7 +15,7 @@ makedepends=('unzip')
 _archivename="ksp-linux-$pkgver"
 source=("$_archivename.zip" "$pkgname.desktop")
 sha256sums=('c0e0c217cd725625d00d51eab7e49d2d34a7f791e00caf40b212f4252a2eb556' 
-'e6591e5ddf03308515c493f267ee7464a7897d8db07bc2353abde661032a1e64')
+'ede0ac99c2563a99bfd29ce0ce23560821cbbd655fd90e42649a0d92fb22b7e3')
 
 package()
 {
