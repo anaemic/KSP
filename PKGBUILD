@@ -17,6 +17,8 @@ source=("$_archivename.zip" "$pkgname.desktop")
 sha256sums=('c0e0c217cd725625d00d51eab7e49d2d34a7f791e00caf40b212f4252a2eb556' 
 'ede0ac99c2563a99bfd29ce0ce23560821cbbd655fd90e42649a0d92fb22b7e3')
 
+PKGEXT=".pkg.tar"
+
 package()
 {
 	install -d "$pkgdir/opt/"
