@@ -23,19 +23,16 @@ package()
 {
 	install -d "$pkgdir/opt/"
 
-# Endless permissions errors in game, must resist urge to 777 everything
-	cp -r "$srcdir/KSP_linux/" "$pkgdir/opt/$pkgname"
 
+	cp -r "$srcdir/KSP_linux/" "$pkgdir/opt/$pkgname"
 	cd "$pkgdir/opt/$pkgname"
 
 	install -d -m777 "Screenshots/" "Plugins/" "PluginData/"
-	chmod -R 0777 "saves/"
-	
 	touch "settings.cfg" "KSP.log"
-	chmod o+w "settings.cfg" "KSP.log" "Physics.cfg" "PartDatabase.cfg"
-	
-	chmod -R 0777 "GameData/"
-	chmod -R 0777 "KSP_Data/"
+# You will have endless permissions errors in game if you change these settings
+	cd "$pkgdir/opt"
+	chmod -R 0777 "kerbalspaceprogram/"
+	cd "$pkgdir/opt/$pkgname"
 	
 # TODO: add more unneeded files and remove the bundled mono
 	for i in "${_purgefiles[@]}"; do
@@ -49,7 +46,6 @@ package()
 	else
 		ln -s "/opt/$pkgname/KSP.x86" "$pkgdir/usr/bin/$pkgname"
 	fi
-
 
 	install -D -m644 "$srcdir/$pkgname.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
 	install -D -m644 "$pkgdir/opt/$pkgname/Launcher_Data/Resources/UnityPlayer.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
