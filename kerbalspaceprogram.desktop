@@ -1,11 +1,9 @@
 [Desktop Entry]
-Encoding=UTF-8
-Value=1.0
+Version=1.0
 Type=Application
-Name=Kerbal Space Proram
-Comment=A multi-genre game where the players create their own space 
-program
-Icon=kerbalspaceprogram.png
+Name=Kerbal Space Program
+Comment=A game where players create their own space program
+Icon=kerbalspaceprogram
 Exec=kerbalspaceprogram
 Categories=Game;
 Path=/opt/kerbalspaceprogram
