@@ -12,3 +12,4 @@ Install Instructions:
 3) Download the kerbal space program installer .zip for linux from the official website
 4) Move it into your newly created KSP folder
 5) makepkg
+6) sudo pacman -U kerbalspaceprogram-1.2.2-1-x86_64.pkg.tar 
