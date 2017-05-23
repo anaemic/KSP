@@ -23,7 +23,7 @@ package()
 {
 	install -d "$pkgdir/opt/"
 
-# took me ~2h to know what has to have which permissions..
+# Endless permissions errors in game, must resist urge to 777 everything
 	cp -r "$srcdir/KSP_linux/" "$pkgdir/opt/$pkgname"
 
 	cd "$pkgdir/opt/$pkgname"
@@ -32,13 +32,11 @@ package()
 	chmod -R 0777 "saves/"
 	
 	touch "settings.cfg" "KSP.log"
-	chmod o+w "settings.cfg" "KSP.log"
+	chmod o+w "*.cfg" "KSP.log"
 
-# I don't know if i should cry or laugh..
-# For the ASSETS! directory; needs executable and write on all files!?
-# Fun Fact: It doesn't even write to it.
 	chmod -R 0777 "GameData/"
-
+	chmod -R 0777 "KSP_Data/"
+	
 # TODO: add more unneeded files and remove the bundled mono
 	for i in "${_purgefiles[@]}"; do
 		echo "Removing unneeded file: $i"; rm "$i"
